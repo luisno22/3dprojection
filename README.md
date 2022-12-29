@@ -6,3 +6,26 @@ K = [fx, s, Rx;
       0,  0, 1]
 
 Henceforth, the calibration parameters will allow future transformations, and extrinsic parameters calculations, of captured frames regarding the calibration pattern spot in the shot, in order to obtain a 2D projection of a desired 3D figure.
+
+# Code Usage
+
+-c With this argument, the code will only execute the camera calibration
+mode, saving the outputs into a XML file named "parameters.xml". The
+calibration process will run through all the jpeg images in the directory
+/images previously created in the workspace. The image names have
+to be renamed to ascendant integers in order to be collected as inputs
+by the script.
+-r This argument sets the script mode to reconstruct a 3D object and
+project it into a 2D image, in this mode, the code will use as input
+for the camera parameters a pre-existing file named "parameters.xml"
+to work with. Furthermore, if a video file is specified behind this ar-
+gument, the code will run the reconstruction over the video, otherwise
+the reconstruction will take the default camera input of the computer.
+-s This argument will make the code show the calibration results for each
+image, drawing the found corners, if any. It has to be used alongside
+the [-c] argument.
+-h With this argument, any arguments used coupled with this will be
+ignored, and only a help menu will be shown.
+Except the [-h] argument, all arguments can be mixed, i.e. Mixing -c -r
+arguments will cause a calibration and reconstrucion execution of the code.
+A result video with will be saved in the workspace as ’outputVideo.avi’.
