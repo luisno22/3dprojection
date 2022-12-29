@@ -2,7 +2,6 @@
 //*                            Luis Nolasco Ramirez                        *//
 //* g++ calibration.cpp -o calibration `pkg-config opencv --cflags --libs` *//
 //**************************************************************************//
-
 #include <stdlib.h>
 #include <vector>
 #include <iostream>
